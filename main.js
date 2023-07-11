@@ -44,7 +44,12 @@ $(document).ready(function(){
         invalidHandler: function(event,validador){
             let camposIncorretos = validador.numberOfInvalids();
             if (camposIncorretos){
-                alert(`Há ${camposIncorretos} campos incorretos`);
+                if (camposIncorretos === 1){
+                    alert(`Há ${camposIncorretos} campo incorreto`);
+                } else{
+                    alert(`Há ${camposIncorretos} campos incorretos`);
+                }
+                
             }
         }
     })
